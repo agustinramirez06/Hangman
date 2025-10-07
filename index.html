@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎯 Ahorcado Web</title>
+  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Juego del Ahorcado</h1>
+
+    <div class="categoria">
+      <label for="categoria">Elige una categoría:</label>
+      <select id="categoria">
+        <option value="deportes">Deportes</option>
+        <option value="objetos">Objetos</option>
+        <option value="colores">Colores</option>
+      </select>
+      <button id="iniciar">Iniciar Juego</button>
+    </div>
+
+    <div id="juego" class="hidden">
+      <div id="ahorcado" class="ahorcado"></div>
+      <p id="palabraOculta" class="palabra"></p>
+      <p id="errores"></p>
+      <p id="letras"></p>
+
+      <input type="text" id="letraInput" maxlength="1" placeholder="Escribe una letra...">
+      <button id="probarLetra">Probar</button>
+    </div>
+
+    <p id="mensajeFinal" class="mensaje"></p>
+    <button id="reiniciar" class="hidden">Jugar otra vez</button>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

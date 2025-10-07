@@ -1,0 +1,177 @@
+/* ==== ESTILOS GENERALES ==== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  width: 400px;
+}
+
+h1 {
+  color: #ffe66d;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+}
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #00a8e8;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+.hidden {
+  display: none;
+}
+
+.palabra {
+  font-size: 1.8rem;
+  letter-spacing: 8px;
+  margin: 15px 0;
+}
+
+.mensaje {
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #ffe66d;
+}
+
+/* ==== DIBUJO DEL AHORCADO ==== */
+.ahorcado {
+  width: 200px;
+  height: 220px;
+  margin: 0 auto 10px auto;
+  position: relative;
+}
+
+.base, .poste, .brazo, .cuerda, .cabeza, .cuerpo, .brazoIzq, .brazoDer, .piernaIzq, .piernaDer {
+  position: absolute;
+  background-color: #fff;
+}
+
+/* Estructura fija */
+.base { width: 120px; height: 6px; bottom: 0; left: 40px; }
+.poste { width: 6px; height: 200px; left: 40px; bottom: 0; }
+.brazo { width: 100px; height: 6px; top: 0; left: 40px; }
+.cuerda { width: 2px; height: 25px; left: 135px; top: 6px; background-color: #fff; }
+
+/* Partes del cuerpo ocultas por defecto */
+.cabeza, .cuerpo, .brazoIzq, .brazoDer, .piernaIzq, .piernaDer {
+  display: none;
+}
+
+/* Cuerpo */
+.cabeza {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid white;
+  left: 118px;
+  top: 30px;
+  background: none;
+}
+
+.cuerpo {
+  width: 3px;
+  height: 50px;
+  background-color: white;
+  left: 135px;
+  top: 65px;
+}
+
+.brazoIzq {
+  width: 3px;
+  height: 30px;
+  background-color: white;
+  left: 115px;
+  top: 75px;
+  transform: rotate(-30deg);
+}
+
+.brazoDer {
+  width: 3px;
+  height: 30px;
+  background-color: white;
+  left: 155px;
+  top: 75px;
+  transform: rotate(30deg);
+}
+
+.piernaIzq {
+  width: 3px;
+  height: 35px;
+  background-color: white;
+  left: 120px;
+  top: 115px;
+  transform: rotate(-20deg);
+}
+
+.piernaDer {
+  width: 3px;
+  height: 35px;
+  background-color: white;
+  left: 150px;
+  top: 115px;
+  transform: rotate(20deg);
+}
+
+
+/* ...existing code... */
+#tecladoVirtual {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+#tecladoVirtual .tecla {
+  width: 32px;
+  height: 32px;
+  margin: 2px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: none;
+  background: #ffe66d;
+  color: #222;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#tecladoVirtual .tecla:disabled {
+  background: #bbb;
+  color: #fff;
+  cursor: not-allowed;
+}
